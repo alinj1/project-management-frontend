@@ -2,17 +2,6 @@
 const menuIcon = document.querySelector('.menu-icon');
 const sidebar = document.querySelector('.sidebar');
 
-// projects lists
-const projectToggles = document.querySelectorAll('.projects__project-statuses');
-const projectLists = document.querySelectorAll(".projects__project-list");
-
-// create project button
-const createProjectButton = document.querySelector('.projects__create-project')
-// create project Modal box
-const projectModal = document.querySelector('.projects__modal')
-const modalCloseIcon = document.querySelector('.projects__modal-close-icon')
-const modalCloseLink = document.querySelector('.projects__modal-form-cancel-link')
-
 // notif drop down menu
 const notifDropdownLink = document.querySelector('.header__notif-link')
 const notifDropdown = document.querySelector('.header__notif-dropdown')
@@ -26,29 +15,6 @@ const userDropdown = document.querySelector('.header__user-dropdown')
 menuIcon.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-close');
 });
-
-// expand/collapse projects lists
-projectToggles.forEach((toggles, index) => {
-    toggles.addEventListener('click', (e) => {
-        e.preventDefault()
-        projectLists[index].classList.toggle('projects__project-list-toggle');
-    })
-})
-
-// show create projects modal box
-createProjectButton.addEventListener('click', () => {
-    projectModal.style.display = 'block'
-})
-
-
-// close modal box with icon
-modalCloseIcon.addEventListener('click', () => {
-    projectModal.style.display = 'none'
-})
-// close modal box with cancel link
-modalCloseLink.addEventListener('click', () => {
-    projectModal.style.display = 'none'
-})
 
 // boolean helper for close/show drop down menu
 let isUserDropdownVisible = false

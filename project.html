@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+
+    <!---======== CSS ========--->
+    <link rel="stylesheet" href="/css//normalize.css">
+    <link rel="stylesheet" href="/css//styles.css">
+
+    <!---======== boxicons CSS ========--->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar close">
+            <div class="top-sidebar">
+                <div class="logo-image-container">
+                    <img class="logo-image-container__image" src="images/m-logo.png" alt="Website Logo">
+                </div>
+                <div class="logo-title">
+                    <h1 class="logo-title__heading">Manager</h1>
+                </div>
+            </div>
+
+            <div class="middle-sidebar">
+                <nav class="sidebar-nav">
+                    <ul class="nav-list">
+                        <li class="nav-list__item">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-home-alt nav-icon'></i>
+                                <span class="nav-list__text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="projects.html" class="nav-link">
+                                <i class='bx bx-folder nav-icon'></i>
+                                <span class="nav-list__text">Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-task nav-icon'></i>
+                                <span class="nav-list__text">Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-bell nav-icon'></i>
+                                <span class="nav-list__text">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-user-pin nav-icon'></i>
+                                <span class="nav-list__text">People</span>
+                            </a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="#" class="nav-link">
+                                <i class='bx bx-cog nav-icon'></i>
+                                <span class="nav-list__text">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="bottom-sidebar">
+                <div class="logout">
+                    <li class="nav-list__item">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-log-out nav-icon'></i>
+                            <span class="logout__text">Logout</span>
+                        </a>
+                    </li>
+
+                </div>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header class="header">
+                <div class="header-container">
+                    <div class="left-header">
+                        <div class="header__menu-icon">
+                            <i class='bx bx-menu nav-icon menu-icon'></i>
+                        </div>
+                        <form class="header-form" action="">
+                            <div class="header__input-box">
+                                <button class="header__search-btn">
+                                    <i class='bx bx-search search-icon'></i>
+                                </button>
+                                <input class="header__search-input" type="text" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="right-header">
+                        <div class="header__notif">
+                            <a class="header__notif-link" href="#">
+                                <i class='bx bx-bell header__notif-icon'></i>
+                            </a>
+                            <div class="header__notif-dropdown">
+                                <div class="header__notif-dropdown-heading">
+                                    <span class="header__notif-dropdown-title">Notifications</span>
+                                    <a href="#" class="header__notif-dropdown-clear">Clear list</a>
+                                </div>
+                                <div class="header__notif-dropdown-items">
+                                    <div class="header__notif-dropdown-item">
+                                        <div class="header__notif-dropdown-item-imgcontainer">
+                                            <img src="/images/avatar-2.jpg" alt="user profile picture"
+                                                class="header__notif-dropdown-item-img">
+                                        </div>
+                                        <div class="header__notif-dropdown-item-content">
+                                            <p class="header__notif-dropdown-item-text">Sarah sent you an invitation to
+                                                Database Design Project</p>
+                                            <p class="header__notif-dropdown-item-time"> 30 mins ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="header__notif-dropdown-item">
+                                        <div class="header__notif-dropdown-item-imgcontainer">
+                                            <img src="/images/avatar-2.jpg" alt="user profile picture"
+                                                class="header__notif-dropdown-item-img">
+                                        </div>
+                                        <div class="header__notif-dropdown-item-content">
+                                            <p class="header__notif-dropdown-item-text">Sarah sent you an invitation to
+                                                Database Design Project</p>
+                                            <p class="header__notif-dropdown-item-time"> 30 mins ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="header__notif-dropdown-item">
+                                        <div class="header__notif-dropdown-item-imgcontainer">
+                                            <img src="/images/avatar-2.jpg" alt="user profile picture"
+                                                class="header__notif-dropdown-item-img">
+                                        </div>
+                                        <div class="header__notif-dropdown-item-content">
+                                            <p class="header__notif-dropdown-item-text">Sarah sent you an invitation to
+                                                Database Design Project</p>
+                                            <p class="header__notif-dropdown-item-time"> 30 mins ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="header__notif-dropdown-item">
+                                        <div class="header__notif-dropdown-item-imgcontainer">
+                                            <img src="/images/avatar-2.jpg" alt="user profile picture"
+                                                class="header__notif-dropdown-item-img">
+                                        </div>
+                                        <div class="header__notif-dropdown-item-content">
+                                            <p class="header__notif-dropdown-item-text">Sarah sent you an invitation to
+                                                Database Design Project</p>
+                                            <p class="header__notif-dropdown-item-time"> 30 mins ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="header__notif-dropdown-item">
+                                        <div class="header__notif-dropdown-item-imgcontainer">
+                                            <img src="/images/avatar-2.jpg" alt="user profile picture"
+                                                class="header__notif-dropdown-item-img">
+                                        </div>
+                                        <div class="header__notif-dropdown-item-content">
+                                            <p class="header__notif-dropdown-item-text">Sarah sent you an invitation to
+                                                Database Design Project</p>
+                                            <p class="header__notif-dropdown-item-time"> 30 mins ago</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__icon-user-splitor"></div>
+                        <div class="header__user">
+                            <a class="header__user-link" href="#">
+                                <div class="header__user-image-container">
+                                    <img src="/images/Mike-avatar.png" alt="user profile picture"
+                                        class="header__user-image">
+                                </div>
+                                <p class="header__user-name">Michael</p>
+                                <i class='bx bx-chevron-down header__dropdown-icon'></i>
+                            </a>
+                            <div class="header__user-dropdown">
+                                <div class="header__user-dropdown-status">
+                                    <span class="header__user-dropdown-signin">Signed in as</span>
+                                    <span class="header__user-dropdown-name">Michael Moulana</span>
+                                </div>
+                                <div class="header__user-dropdown-links">
+                                    <a href="#" class="header__user-dropdown-link">
+                                        <i class='bx bx-pencil'></i><span>Edit profile</span>
+                                    </a>
+                                </div>
+                                <div class="header__user-dropdown-links">
+                                    <a href="#" class="header__user-dropdown-link">
+                                        <i class='bx bx-cog'></i>
+                                        <span>Settings</span>
+                                    </a>
+                                </div>
+                                <div class="header__user-dropdown-links">
+                                    <a href="#" class="header__user-dropdown-link">
+                                        <i class='bx bx-log-out'></i>
+                                        <span class="">Logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="main-container">
+                    <!------- PROJECT PAGE ------->
+                    <div class="project__details-members-container">
+                        <div class="project__title-container">
+                            <div class="project__heading">
+                                <h2 class="project__heading-name">Database Design</h2>
+                            </div>
+                            <a class="project__edit-project" href="#"><i class='bx bx-cog'></i>Project Settings</a>
+                        </div>
+    
+                        <div class="project__modal">
+                            <div class="project__modal-content">
+                                <div class="project__modal-flex-container">
+                                    <span class="project__modal-heading">
+                                        Creating new project
+                                    </span>
+                                    <i class='bx bx-x project__modal-close-icon'></i>
+                                </div>
+                                <form action="" method="POST" class="project__modal-form">
+                                    <div class="project__modal-form-box-container">
+                                        <label for="project-modal-form-name">Name</label>
+                                        <input type="text" id="project-modal-form-name" class="project__modal-form-name">
+                                    </div>
+    
+                                    <div class="project__modal-form-box-container">
+                                        <label for="project-modal-form-description">Description</label>
+                                        <textarea name="" id="project-modal-form-description" cols="30" rows="10"
+                                            class="project__modal-form-description"></textarea>
+                                    </div>
+    
+                                    <div class="project__modal-form-box-container">
+                                        <label for="project-modal-form-description">Client/Organization</label>
+                                        <input type="text" id="project-modal-form-description"
+                                            class="project__modal-form-description">
+                                    </div>
+    
+                                    <div class="project__modal-form-box-container">
+                                        <label for="project-modal-form-category">Category</label>
+                                        <select name="" id="project-modal-form-category"
+                                            class="project__modal-form-category">
+                                            <option value="">Select</option>
+                                            <option value="Software Development">Software Development</option>
+                                            <option value="UI/UX Design">UI/UX Design</option>
+                                            <option value="Advertisement">Advertisement</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="project__modal-form-box-container">
+                                        <a href="#" class="project__modal-form-cancel-link">cancel</a>
+                                        <button type="submit" id="project-modal-form-btn">Create</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+    
+                        <!-------------- MEMBERS -------------->
+                        <div class="project__members">
+                            <div class="project__members_title-buttons">
+                                <div class="project__members-title">
+                                    <p class="project__members-title-heading">Members</p>
+                                </div>
+                                <div class="project__members-buttons">
+                                    <div href="" class="project__member-more-prev">
+                                        <i class='bx bx-chevron-left project__member-more-icon'></i>
+                                    </div>
+                                    <div href="" class="project__member-more-next">
+                                        <i class='bx bx-chevron-right project__member-more-icon'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project__members-flex-container">
+                                <div class="project__member-outer-slider">
+                                    <div class="project__members-slider">
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/Mike-avatar.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Moulana M.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/Mike-avatar.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Moulana M.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-2.jpg" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Broshkina A.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Johnson E.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Johnson E.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Johnson E.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Johnson E.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Johnson E.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                        <div class="project__member">
+                                            <div class="project__member-bio">
+                                                <div class="project__member-avatar-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="project__member-avatar-img">
+                                                </div>
+                                                <div class="project__member-texts">
+                                                    <p class="project__member-name">Johnson E.</p>
+                                                    <p class="project__member-profession">UI/UX Designer</p>
+                                                </div>
+                                            </div>
+                                            <p class="project__member-assigned-tasks">Assigned tasks: 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-------------- EVENTS-------------->
+                    <div class="project__events">
+                        <!-------------- TASKS-------------->
+                        <div class="project__tasks">
+                            <div class="project__tasks-title">Tasks</div>
+                            <div class="project__tasks-tables">
+                                <div class="project__tasks-statuses" id="project__tasks-statuses-todo">
+                                    <a href="#" class="project__tasks-statuses-link"
+                                        id="project__tasks-statuses-link-todo"><i
+                                            class='bx bx-chevron-down project__tasks-statuses-link_icon'
+                                            id="project__tasks-statuses_icon-todo"></i>To Do</a>
+                                </div>
+                                <div class="project__tasks-table">
+                                    <div class="project__tasks-row_headings">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-heading__box">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <p class="project__tasks-heading__name">Tasks</p>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <p class="project__tasks-heading__assigned">assignee</p>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <p class="project__tasks-heading__priority">priority</p>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-heading__deadline">deadline</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <p class="project__tasks-heading__comments">comments</p>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                        </div>
+                                    </div>
+                                    <div class="project__tasks-row">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-status_box-outer">
+                                                <div class="project__tasks-status_box-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <a href="project.html" class="project__tasks-name-link">
+                                                UI Design with Figma
+                                            </a>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <div class="project__tasks-asignee-container">
+                                                <img src="/images/avatar-3.png" alt="user profile picture"
+                                                    class="project__tasks-asignee-container-img">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__days">14 day left</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="project__tasks-row">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-status_box-outer">
+                                                <div class="project__tasks-status_box-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <a href="project.html" class="project__tasks-name-link">
+                                                UI Design with Figma
+                                            </a>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <div class="project__tasks-asignee-container">
+                                                <img src="/images/avatar-3.png" alt="user profile picture"
+                                                    class="project__tasks-asignee-container-img">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__days">14 day left</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="project__tasks-tables">
+                                <div class="project__tasks-statuses" id="project__tasks-statuses-inprogress">
+                                    <a href="#" class="project__tasks-statuses-link"
+                                        id="project__tasks-statuses-link-inprogress">
+                                        <i class='bx bx-chevron-down project__tasks-statuses-link_icon'
+                                            id="project__tasks-statuses_icon-inprogress"></i>
+                                        In Progress
+                                    </a>
+                                </div>
+                                <div class="project__tasks-table">
+                                    <div class="project__tasks-row_headings">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-heading__box">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <p class="project__tasks-heading__name">Tasks</p>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <p class="project__tasks-heading__assigned">assignee</p>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <p class="project__tasks-heading__priority">priority</p>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-heading__deadline">deadline</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <p class="project__tasks-heading__comments">comments</p>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="project__tasks-row">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-status_box-outer">
+                                                <div class="project__tasks-status_box-inner">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <a href="project.html" class="project__tasks-name-link">
+                                                UI Design with Figma
+                                            </a>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <div class="project__tasks-asignee-container">
+                                                <img src="/images/avatar-3.png" alt="user profile picture"
+                                                    class="project__tasks-asignee-container-img">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__days">14 day left</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="project__tasks-tables">
+                                <div class="project__tasks-statuses" id="project__tasks-statuses-completed">
+                                    <a href="#" class="project__tasks-statuses-link"
+                                        id="project__tasks-statuses-link-completed"><i
+                                            class='bx bx-chevron-down project__tasks-statuses-link_icon'
+                                            id="project__tasks-statuses_icon-completed"></i>Completed</a>
+                                </div>
+                                <div class="project__tasks-table">
+                                    <div class="project__tasks-row_headings">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-heading__box">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <p class="project__tasks-heading__name">Tasks</p>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <p class="project__tasks-heading__assigned">assignee</p>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <p class="project__tasks-heading__priority">priority</p>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-heading__deadline">deadline</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <p class="project__tasks-heading__comments">comments</p>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="project__tasks-row">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-status_box-outer">
+                                                <div class="project__tasks-status_box-inner">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <a href="project.html" class="project__tasks-name-link">
+                                                UI Design with Figma
+                                            </a>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <div class="project__tasks-asignee-container">
+                                                <img src="/images/avatar-3.png" alt="user profile picture"
+                                                    class="project__tasks-asignee-container-img">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__days">14 day left</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-------------- REMINDERS-------------->
+                        <div class="project__reminders">
+                            <div class="project__reminders-title">Reminders</div>
+                            <div class="project__reminders-container">
+                                <div class="project__reminders-headings">
+                                    <div class="project__reminders-name">
+                                        <p class="project__reminders-heading_name">
+                                            reminder
+                                        </p>
+                                    </div>
+                                    <div class="project__reminders-priority">
+                                        <p class="project__reminders-heading_priority">
+                                            priority
+                                        </p>
+                                    </div>
+                                    <div class="project__reminders-reminder-settings">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project__reminders-reminder">
+                                    <div class="project__reminders-reminder_details">
+                                        <p class="project__reminders-reminder_name">Meeting with project manager at 11 am</p>
+                                        <p class="project__reminders-reminder_date">8 - 10 am, 26th Oct</p>
+                                    </div>
+                                    <div class="project__reminders-reminder_priority">
+                                        <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                    </div>
+                                    <div class="project__reminders-reminder-settings">
+                                        <i class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
+                                    </div>
+                                </div>
+                                <div class="project__reminders-reminder">
+                                    <div class="project__reminders-reminder_details">
+                                        <p class="project__reminders-reminder_name">Meeting with project manager at 11 am</p>
+                                        <p class="project__reminders-reminder_date">8 - 10 am, 26th Oct</p>
+                                    </div>
+                                    <div class="project__reminders-reminder_priority">
+                                        <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                    </div>
+                                    <div class="project__reminders-reminder-settings">
+                                        <i class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
+                                    </div>
+                                </div>
+                                <div class="project__reminders-reminder">
+                                    <div class="project__reminders-reminder_details">
+                                        <p class="project__reminders-reminder_name">Meeting with project manager at 11 am</p>
+                                        <p class="project__reminders-reminder_date">8 - 10 am, 26th Oct</p>
+                                    </div>
+                                    <div class="project__reminders-reminder_priority">
+                                        <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                    </div>
+                                    <div class="project__reminders-reminder-settings">
+                                        <i class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="side-container">
+                    
+                </div> -->
+
+                <div class="project__create-fixed-btn">
+                    <i class="bx bx-plus project__create-fixed-btn_icon"></i>
+                    Event
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/js/project.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

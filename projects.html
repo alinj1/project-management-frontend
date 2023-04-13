@@ -38,7 +38,7 @@
                             </a>
                         </li>
                         <li class="nav-list__item">
-                            <a href="#" class="nav-link">
+                            <a href="projects.html" class="nav-link">
                                 <i class='bx bx-folder nav-icon'></i>
                                 <span class="nav-list__text">Projects</span>
                             </a>
@@ -58,7 +58,7 @@
                         <li class="nav-list__item">
                             <a href="#" class="nav-link">
                                 <i class='bx bx-user-pin nav-icon'></i>
-                                <span class="nav-list__text">Contact List</span>
+                                <span class="nav-list__text">People</span>
                             </a>
                         </li>
                         <li class="nav-list__item">
@@ -204,315 +204,351 @@
             <main class="main">
                 <div class="main-container">
                     <!------- projects page ------->
-                    <div class="projects__heading">
-                        <h2 class="projects__title">Projects</h2>
-                        <a class="projects__create-project" href="#">Create Project</a>
-                        <!-- the modal -->
-                        <div class="projects__modal">
-                            <div class="projects__modal-content">
-                                <div class="projects__modal-flex-container">
-                                    <span class="projects__modal-heading">
-                                        Creating new project
-                                    </span>
-                                    <i class='bx bx-x projects__modal-close-icon'></i>
+                    <div class="projects__main-side_flex-container">
+                        <div class="projects__main-container">
+                            <div class="projects__headings">
+                                <h2 class="projects__title">Projects</h2>
+                                <a class="projects__create-project" href="#"><i class='bx bx-plus'></i>Create Project</a>
+                                <!-- the modal -->
+                                <div class="projects__modal">
+                                    <div class="projects__modal-content">
+                                        <div class="projects__modal-flex-container">
+                                            <span class="projects__modal-heading">
+                                                Creating new project
+                                            </span>
+                                            <i class='bx bx-x projects__modal-close-icon'></i>
+                                        </div>
+                                        <form action="" method="POST" class="projects__modal-form">
+                                            <div class="projects__modal-form-box-container">
+                                                <label for="projects-modal-form-name">Name</label>
+                                                <input type="text" id="projects-modal-form-name"
+                                                    class="projects__modal-form-name">
+                                            </div>
+        
+                                            <div class="projects__modal-form-box-container">
+                                                <label for="projects-modal-form-description">Description</label>
+                                                <textarea name="" id="projects-modal-form-description" cols="30" rows="10"
+                                                    class="projects__modal-form-description"></textarea>
+                                            </div>
+        
+                                            <div class="projects__modal-form-box-container">
+                                                <label for="projects-modal-form-description">Client/Organization</label>
+                                                <input type="text" id="projects-modal-form-description"
+                                                    class="projects__modal-form-description">
+                                            </div>
+        
+                                            <div class="projects__modal-form-box-container">
+                                                <label for="projects-modal-form-category">Category</label>
+                                                <select name="" id="projects-modal-form-category"
+                                                    class="projects__modal-form-category">
+                                                    <option value="">Select</option>
+                                                    <option value="Software Development">Software Development</option>
+                                                    <option value="UI/UX Design">UI/UX Design</option>
+                                                    <option value="Advertisement">Advertisement</option>
+                                                </select>
+                                            </div>
+        
+                                            <div class="projects__modal-form-box-container">
+                                                <a href="#" class="projects__modal-form-cancel-link">cancel</a>
+                                                <button type="submit" id="projects-modal-form-btn">Create</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <form action="" method="POST" class="projects__modal-form">
-                                    <div class="project__modal-form-box-container">
-                                        <label for="projects-modal-form-name">Name</label>
-                                        <input type="text" id="projects-modal-form-name"
-                                            class="projects__modal-form-name">
+                            </div>
+                        
+    
+                            <div class="projects__container">
+                                <div class="projects__project-tables">
+                                    <div class="projects__project-statuses" id="projects__project-statuses-todo">
+                                        <a href="#" class="projects__project-statuses-link"
+                                            id="projects__project-statuses-link-todo"><i
+                                                class='bx bx-chevron-down projects__project-statuses-link_icon'
+                                                id="projects__project-statuses_icon-todo"></i>To Do</a>
                                     </div>
-
-                                    <div class="project__modal-form-box-container">
-                                        <label for="projects-modal-form-description">Description</label>
-                                        <textarea name="" id="projects-modal-form-description" cols="30" rows="10"
-                                            class="projects__modal-form-description"></textarea>
+                                    <div class="projects__project-table">
+                                        <div class="projects__project-row_headings">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-heading__box">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <p class="projects__project-heading__name">projects</p>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <p class="projects__project-heading__assigned">assignee</p>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <p class="projects__project-heading__priority">priority</p>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-heading__deadline">deadline</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <p class="projects__project-heading__comments">comments</p>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                            </div>
+                                        </div>
+                                        <div class="projects__project-row">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-status_box-outer">
+                                                    <div class="projects__project-status_box-inner">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <a href="project.html" class="projects__project-name-link">
+                                                    <div class="projects__project-name-link_name">Database Design</div>
+                                                    <div class="projects__project-name-link_client">Golestan University</div>
+                                                </a>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <div class="projects__project-asignee-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="projects__project-asignee-container-img">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <i class='bx bxs-flag projects__project-priority-icon'></i>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-deadline__text">2th October, 2016</p>
+                                                <p class="projects__project-deadline__days">14 day left</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <i class='bx bx-message-rounded-dots projects__project-comments-icon'></i>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                                <i class='bx bx-dots-horizontal-rounded projects__project-settings-icon'></i>
+                                            </div>
+                                        </div>
+    
+    
+                                        <div class="projects__project-row">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-status_box-outer">
+                                                    <div class="projects__project-status_box-inner">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <a href="project.html" class="projects__project-name-link">
+                                                    <div class="projects__project-name-link_name">Database Design</div>
+                            <div class="projects__project-name-link_client">Golestan University</div>
+                                                </a>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <div class="projects__project-asignee-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="projects__project-asignee-container-img">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <i class='bx bxs-flag projects__project-priority-icon'></i>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-deadline__text">2th October, 2016</p>
+                                                <p class="projects__project-deadline__days">14 day left</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <i class='bx bx-message-rounded-dots projects__project-comments-icon'></i>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                                <i class='bx bx-dots-horizontal-rounded projects__project-settings-icon'></i>
+                                            </div>
+                                        </div>
+    
+    
+    
                                     </div>
-
-                                    <div class="project__modal-form-box-container">
-                                        <label for="projects-modal-form-description">Client/Organization</label>
-                                        <input type="text" id="projects-modal-form-description"
-                                            class="projects__modal-form-description">
+                                </div>
+    
+    
+    
+    
+                                <div class="projects__project-tables">
+                                    <div class="projects__project-statuses" id="projects__project-statuses-inprogress">
+                                        <a href="#" class="projects__project-statuses-link"
+                                            id="projects__project-statuses-link-inprogress">
+                                            <i class='bx bx-chevron-down projects__project-statuses-link_icon'
+                                                id="projects__project-statuses_icon-inprogress"></i>
+                                            In Progress
+                                        </a>
                                     </div>
-
-                                    <div class="project__modal-form-box-container">
-                                        <label for="projects-modal-form-category">Category</label>
-                                        <select name="" id="projects-modal-form-category"
-                                            class="projects__modal-form-category">
-                                            <option value="">Select</option>
-                                            <option value="Software Development">Software Development</option>
-                                            <option value="UI/UX Design">UI/UX Design</option>
-                                            <option value="Advertisement">Advertisement</option>
-                                        </select>
+                                    <div class="projects__project-table">
+                                        <div class="projects__project-row_headings">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-heading__box">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <p class="projects__project-heading__name">projects</p>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <p class="projects__project-heading__assigned">assignee</p>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <p class="projects__project-heading__priority">priority</p>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-heading__deadline">deadline</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <p class="projects__project-heading__comments">comments</p>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                            </div>
+                                        </div>
+    
+    
+                                        <div class="projects__project-row">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-status_box-outer">
+                                                    <div class="projects__project-status_box-inner">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <a href="project.html" class="projects__project-name-link">
+                                                    <div class="projects__project-name-link_name">Database Design</div>
+                                                    <div class="projects__project-name-link_client">Golestan University</div>
+                                                </a>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <div class="projects__project-asignee-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="projects__project-asignee-container-img">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <i class='bx bxs-flag projects__project-priority-icon'></i>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-deadline__text">2th October, 2016</p>
+                                                <p class="projects__project-deadline__days">14 day left</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <i class='bx bx-message-rounded-dots projects__project-comments-icon'></i>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                                <i class='bx bx-dots-horizontal-rounded projects__project-settings-icon'></i>
+                                            </div>
+                                        </div>
+    
                                     </div>
-
-                                    <div class="project__modal-form-box-container">
-                                        <a href="#" class="projects__modal-form-cancel-link">cancel</a>
-                                        <button type="submit" id="projects-modal-form-btn">Create</button>
+                                </div>
+    
+    
+    
+    
+    
+                                <div class="projects__project-tables">
+                                    <div class="projects__project-statuses" id="projects__project-statuses-completed">
+                                        <a href="#" class="projects__project-statuses-link"
+                                            id="projects__project-statuses-link-completed"><i
+                                                class='bx bx-chevron-down projects__project-statuses-link_icon'
+                                                id="projects__project-statuses_icon-completed"></i>Completed</a>
                                     </div>
-                                </form>
+                                    <div class="projects__project-table">
+                                        <div class="projects__project-row_headings">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-heading__box">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <p class="projects__project-heading__name">projects</p>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <p class="projects__project-heading__assigned">assignee</p>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <p class="projects__project-heading__priority">priority</p>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-heading__deadline">deadline</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <p class="projects__project-heading__comments">comments</p>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                            </div>
+                                        </div>
+    
+    
+                                        <div class="projects__project-row">
+                                            <div class="projects__project-status">
+                                                <div class="projects__project-status_box-outer">
+                                                    <div class="projects__project-status_box-inner">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-name">
+                                                <a href="project.html" class="projects__project-name-link">
+                                                    <div class="projects__project-name-link_name">Database Design</div>
+                            <div class="projects__project-name-link_client">Golestan University</div>
+                                                </a>
+                                            </div>
+                                            <div class="projects__project-assignee">
+                                                <div class="projects__project-asignee-container">
+                                                    <img src="/images/avatar-3.png" alt="user profile picture"
+                                                        class="projects__project-asignee-container-img">
+                                                </div>
+                                            </div>
+                                            <div class="projects__project-priority">
+                                                <i class='bx bxs-flag projects__project-priority-icon'></i>
+                                            </div>
+                                            <div class="projects__project-deadline">
+                                                <p class="projects__project-deadline__text">2th October, 2016</p>
+                                                <p class="projects__project-deadline__days">14 day left</p>
+                                            </div>
+                                            <div class="projects__project-comments">
+                                                <i class='bx bx-message-rounded-dots projects__project-comments-icon'></i>
+                                            </div>
+                                            <div class="projects__project-settings">
+                                                <i class='bx bx-dots-horizontal-rounded projects__project-settings-icon'></i>
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div>
+        
+                            </div>
+    
+    
+    
+    
+    
+    
+    
+                        </div>
+                        <div class="projects-side__main-container">
+                            <p class="projects-side__title">Statistics</p>
+                            <div class="projects-side__statistics">
+                                <div class="projects-side__statistics-container">
+                                    <div class="projects-side__statistics-box">
+                                        <p class="projects-side__statistics-box_text">total</p>
+                                        <p class="projects-side__statistics-box_number">22</p>
+                                    </div>
+                                    <div class="projects-side__statistics-box">
+                                        <p class="projects-side__statistics-box_text">completed</p>
+                                        <p class="projects-side__statistics-box_number">22</p>
+                                    </div>
+                                </div>
+                                <div class="projects-side__statistics-container">
+                                    <div class="projects-side__statistics-box">
+                                        <p class="projects-side__statistics-box_text">in progress</p>
+                                        <p class="projects-side__statistics-box_number">22</p>
+                                    </div>
+                                    <div class="projects-side__statistics-box">
+                                        <p class="projects-side__statistics-box_text">waiting</p>
+                                        <p class="projects-side__statistics-box_number">22</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="projects__statistics-itemstyle">
-                        <div class="projetcs__statistics">
-                            <div class="projetcs__statistics-box">
-                                <p class="projetcs__statistics-number">3</p>
-                                <p class="projetcs__statistics-status">In Progress</p>
-                            </div>
-                            <div class="projetcs__statistics-box">
-                                <p class="projetcs__statistics-number">2</p>
-                                <p class="projetcs__statistics-status">Up Coming</p>
-                            </div>
-                            <div class="projetcs__statistics-box">
-                                <p class="projetcs__statistics-number">17</p>
-                                <p class="projetcs__statistics-status">Total Projects</p>
-                            </div>
-                        </div>
-                        <div class="projects__viewstyle">
-                            <i class='bx bx-list-ul projects__viewstyle-icon'></i>
-                            <i class='bx bx-grid-alt projects__viewstyle-icon'></i>
-                        </div>
-                    </div>
-                    <div class="projects__project-lists">
-                        <a href="#" class="projects__project-statuses"><i class='bx bx-chevron-down'></i>Up Coming</a>
-                        <ul class="projects__project-list">
-                            <li class="projects__project-item">
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__name">projects</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__assigned">assigned to</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__status">status</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__deadline">deadline</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">Database Design</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/Mike-avatar.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/avatar-2.jpg" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/avatar-3.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">Early</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">11 day left</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">UI/UX Design</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/avatar-2.jpg" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">On Time</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">1 day left</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">Front-end development</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/Mike-avatar.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/avatar-3.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">Late</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">behind</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="projects__project-lists">
-                        <a href="#" class="projects__project-statuses"><i class='bx bx-chevron-down'></i>In Progress</a>
-                        <ul class="projects__project-list">
-                            <li class="projects__project-item">
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__name">projects</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__assigned">assigned to</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__status">status</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__deadline">deadline</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">Database Design</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/avatar-2.jpg" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">Early</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">11 day left</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">UI/UX Design</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/avatar-3.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">On Time</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">1 day left</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">Front-end development</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/Mike-avatar.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">Late</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">behind</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="projects__project-lists">
-                        <a href="#" class="projects__project-statuses"><i class='bx bx-chevron-down'></i>Completed</a>
-                        <ul class="projects__project-list">
-                            <li class="projects__project-item">
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__name">projects</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__assigned">assigned to</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__status">status</p>
-                                </div>
-                                <div class="projects__project-heading">
-                                    <p class="projects__project-heading__deadline">deadline</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">Database Design</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/Mike-avatar.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">Early</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">11 day left</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">UI/UX Design</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/Mike-avatar.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">On Time</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">1 day left</p>
-                                </div>
-                            </li>
-                            <li class="projects__project-item">
-                                <a href="#" class="projects__project-link">
-                                    <p class="projects__project-name">Front-end development</p>
-                                    <p class="projects__project-client">University of Golestan</p>
-                                </a>
-                                <div class="projects__project-assignees">
-                                    <div class="projects__project-asignees-container">
-                                        <img src="/images/Mike-avatar.png" alt="user profile picture"
-                                            class="projects__project-asignee-container-img">
-                                    </div>
-                                </div>
-                                <div class="projects__project-status">
-                                    <p class="projects__project-status__text">Late</p>
-                                </div>
-                                <div class="projects__project-deadline">
-                                    <p class="projects__project-deadline__text">30th September, 2016</p>
-                                    <p class="projects__project-deadline__days">behind</p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <!-- <div class="side-container">
@@ -523,6 +559,7 @@
     </div>
 
     <script src="/js/app.js"></script>
+    <script src="/js/projects.js"></script>
 </body>
 
 </html>
