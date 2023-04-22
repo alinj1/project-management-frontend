@@ -13,12 +13,14 @@
 
     <!---======== boxicons CSS ========--->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
+        integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
     <div class="container">
-        <aside class="sidebar close">
+        <aside class="sidebar">
             <div class="top-sidebar">
                 <div class="logo-image-container">
                     <img class="logo-image-container__image" src="images/m-logo.png" alt="Website Logo">
@@ -217,33 +219,35 @@
                             </div>
                             <a class="project__edit-project" href="#"><i class='bx bx-cog'></i>Project Settings</a>
                         </div>
-    
+
                         <div class="project__modal">
                             <div class="project__modal-content">
                                 <div class="project__modal-flex-container">
                                     <span class="project__modal-heading">
-                                        Creating new project
+                                        Project Settings
                                     </span>
                                     <i class='bx bx-x project__modal-close-icon'></i>
                                 </div>
                                 <form action="" method="POST" class="project__modal-form">
+
                                     <div class="project__modal-form-box-container">
                                         <label for="project-modal-form-name">Name</label>
-                                        <input type="text" id="project-modal-form-name" class="project__modal-form-name">
+                                        <input type="text" id="project-modal-form-name"
+                                            class="project__modal-form-name">
                                     </div>
-    
+
                                     <div class="project__modal-form-box-container">
                                         <label for="project-modal-form-description">Description</label>
                                         <textarea name="" id="project-modal-form-description" cols="30" rows="10"
                                             class="project__modal-form-description"></textarea>
                                     </div>
-    
+
                                     <div class="project__modal-form-box-container">
                                         <label for="project-modal-form-description">Client/Organization</label>
                                         <input type="text" id="project-modal-form-description"
                                             class="project__modal-form-description">
                                     </div>
-    
+
                                     <div class="project__modal-form-box-container">
                                         <label for="project-modal-form-category">Category</label>
                                         <select name="" id="project-modal-form-category"
@@ -254,7 +258,16 @@
                                             <option value="Advertisement">Advertisement</option>
                                         </select>
                                     </div>
-    
+
+                                    <div class="project__modal-form-box-container">
+                                        <label for="project-modal-form-description">Start Date</label>
+                                        <input type="date" id="project-modal-form-description"
+                                            class="project__modal-form-description">
+                                        <label for="project-modal-form-description">Due Date</label>
+                                        <input type="date" id="project-modal-form-description"
+                                            class="project__modal-form-description">
+                                    </div>
+
                                     <div class="project__modal-form-box-container">
                                         <a href="#" class="project__modal-form-cancel-link">cancel</a>
                                         <button type="submit" id="project-modal-form-btn">Create</button>
@@ -262,19 +275,72 @@
                                 </form>
                             </div>
                         </div>
-    
+
                         <!-------------- MEMBERS -------------->
                         <div class="project__members">
-                            <div class="project__members_title-buttons">
+                            <div class="project__members_heading-wrapper">
                                 <div class="project__members-title">
                                     <p class="project__members-title-heading">Members</p>
                                 </div>
-                                <div class="project__members-buttons">
-                                    <div href="" class="project__member-more-prev">
-                                        <i class='bx bx-chevron-left project__member-more-icon'></i>
+                                <div class="project__members_btn-wrapaper">
+                                    <span class="project__members-seeall">See All</span>
+                                    <!-- modal box for all members -->
+                                    <div class="project__member-modal">
+                                        <div class="project__member-modal-content">
+                                            <div class="project__member-modal-flex-container">
+                                                <span class="project__member-modal-heading">
+                                                    Members
+                                                </span>
+                                                <i class='bx bx-x project__member-modal-close-icon'></i>
+                                            </div>
+                                            <div class="project__member-modal_addmember">
+                                                <a href="" class="project__member-modal_addmember-link">
+
+                                                </a>
+                                            </div>
+                                            <div class="project__member-modal_members">
+
+
+                                                <table class="project__member-modal_members">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Avatar</th>
+                                                            <th>Full Name</th>
+                                                            <th>Email</th>
+                                                            <th>Assigned Tasks</th>
+                                                            <th>Control</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr class="project__member-modal_member">
+                                                            <td class="project__member-modal_member-avatar"><img
+                                                                    src="/images/Mike-avatar.png"
+                                                                    alt="user profile picture"
+                                                                    class="project__member-modal_member-img"></td>
+                                                            <td class="project__member-modal_member-text">Michael
+                                                                Moulana</td>
+                                                            <td class="project__member-modal_member-text">
+                                                                Michael@gmail.com</td>
+                                                            <td class="project__member-modal_member-text">120</td>
+                                                            <td class="project__member-modal_member-text">
+                                                                <a href=""
+                                                                    class="project__member-modal_member-link">Remove</a>
+                                                            </td>
+
+                                                </table>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div href="" class="project__member-more-next">
-                                        <i class='bx bx-chevron-right project__member-more-icon'></i>
+
+                                    <div class="project__members-buttons">
+                                        <div href="" class="project__member-more-prev">
+                                            <i class='bx bx-chevron-left project__member-more-icon'></i>
+                                        </div>
+                                        <div href="" class="project__member-more-next">
+                                            <i class='bx bx-chevron-right project__member-more-icon'></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -437,6 +503,9 @@
                                         <div class="project__tasks-comments">
                                             <p class="project__tasks-heading__comments">comments</p>
                                         </div>
+                                        <div class="project__tasks-upload">
+                                            <p class="project__tasks-heading__attach">upload</p>
+                                        </div>
                                         <div class="project__tasks-settings">
                                         </div>
                                     </div>
@@ -446,6 +515,31 @@
                                                 <div class="project__tasks-status_box-inner">
                                                 </div>
                                             </div>
+                                            <!-- modal box -->
+                                            <div class="project-task-modal">
+                                                <div class="project-task-modal__content">
+                                                    <!-- Modal box content goes here -->
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">To Do</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-progress">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">In Progress</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Add For Checking</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-completed">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Completed</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="project__tasks-name">
                                             <a href="project.html" class="project__tasks-name-link">
@@ -462,11 +556,14 @@
                                             <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                         </div>
                                         <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__text">4-17-2023</p>
                                             <p class="project__tasks-deadline__days">14 day left</p>
                                         </div>
                                         <div class="project__tasks-comments">
                                             <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-upload">
+                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
                                         </div>
                                         <div class="project__tasks-settings">
                                             <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
@@ -480,6 +577,31 @@
                                                 <div class="project__tasks-status_box-inner">
                                                 </div>
                                             </div>
+                                            <!-- modal box -->
+                                            <div class="project-task-modal">
+                                                <div class="project-task-modal__content">
+                                                    <!-- Modal box content goes here -->
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">To Do</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-progress">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">In Progress</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Add For Checking</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-completed">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Completed</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="project__tasks-name">
                                             <a href="project.html" class="project__tasks-name-link">
@@ -496,11 +618,14 @@
                                             <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                         </div>
                                         <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__text">4-17-2023</p>
                                             <p class="project__tasks-deadline__days">14 day left</p>
                                         </div>
                                         <div class="project__tasks-comments">
                                             <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-upload">
+                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
                                         </div>
                                         <div class="project__tasks-settings">
                                             <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
@@ -545,18 +670,43 @@
                                         <div class="project__tasks-comments">
                                             <p class="project__tasks-heading__comments">comments</p>
                                         </div>
+                                        <div class="project__tasks-upload">
+                                            <p class="project__tasks-heading__attach">upload</p>
+                                        </div>
                                         <div class="project__tasks-settings">
                                         </div>
                                     </div>
-
-
                                     <div class="project__tasks-row">
                                         <div class="project__tasks-status">
                                             <div class="project__tasks-status_box-outer">
                                                 <div class="project__tasks-status_box-inner">
                                                 </div>
                                             </div>
-                                            
+                                            <!-- modal box -->
+                                            <div class="project-task-modal">
+                                                <div class="project-task-modal__content">
+                                                    <!-- Modal box content goes here -->
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">To Do</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-progress">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">In Progress</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Add For Checking</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-completed">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Completed</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="project__tasks-name">
                                             <a href="project.html" class="project__tasks-name-link">
@@ -573,16 +723,82 @@
                                             <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                         </div>
                                         <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__text">4-17-2023</p>
                                             <p class="project__tasks-deadline__days">14 day left</p>
                                         </div>
                                         <div class="project__tasks-comments">
                                             <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
                                         </div>
+                                        <div class="project__tasks-upload">
+                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
+                                        </div>
                                         <div class="project__tasks-settings">
                                             <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
                                         </div>
                                     </div>
+
+                                    <div class="project__tasks-row">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-status_box-outer">
+                                                <div class="project__tasks-status_box-inner">
+                                                </div>
+                                            </div>
+                                            <!-- modal box -->
+                                            <div class="project-task-modal">
+                                                <div class="project-task-modal__content">
+                                                    <!-- Modal box content goes here -->
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">To Do</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-progress">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">In Progress</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Add For Checking</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-completed">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Completed</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <a href="project.html" class="project__tasks-name-link">
+                                                UI Design with Figma
+                                            </a>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <div class="project__tasks-asignee-container">
+                                                <img src="/images/avatar-3.png" alt="user profile picture"
+                                                    class="project__tasks-asignee-container-img">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-deadline__text">4-17-2023</p>
+                                            <p class="project__tasks-deadline__days">14 day left</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-upload">
+                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
+                                        </div>
+                                    </div>
+
+
 
                                 </div>
                             </div>
@@ -619,17 +835,43 @@
                                         <div class="project__tasks-comments">
                                             <p class="project__tasks-heading__comments">comments</p>
                                         </div>
+                                        <div class="project__tasks-upload">
+                                            <p class="project__tasks-heading__attach">upload</p>
+                                        </div>
                                         <div class="project__tasks-settings">
                                         </div>
                                     </div>
-
-
                                     <div class="project__tasks-row">
                                         <div class="project__tasks-status">
                                             <div class="project__tasks-status_box-outer">
                                                 <div class="project__tasks-status_box-inner">
                                                 </div>
                                             </div>
+                                            <!-- modal box -->
+                                            <div class="project-task-modal">
+                                                <div class="project-task-modal__content">
+                                                    <!-- Modal box content goes here -->
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">To Do</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-progress">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">In Progress</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Add For Checking</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-completed">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Completed</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="project__tasks-name">
                                             <a href="project.html" class="project__tasks-name-link">
@@ -646,16 +888,81 @@
                                             <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                         </div>
                                         <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">2th October, 2016</p>
+                                            <p class="project__tasks-deadline__text">4-17-2023</p>
                                             <p class="project__tasks-deadline__days">14 day left</p>
                                         </div>
                                         <div class="project__tasks-comments">
                                             <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
                                         </div>
+                                        <div class="project__tasks-upload">
+                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
+                                        </div>
                                         <div class="project__tasks-settings">
                                             <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
                                         </div>
                                     </div>
+
+                                    <div class="project__tasks-row">
+                                        <div class="project__tasks-status">
+                                            <div class="project__tasks-status_box-outer">
+                                                <div class="project__tasks-status_box-inner">
+                                                </div>
+                                            </div>
+                                            <!-- modal box -->
+                                            <div class="project-task-modal">
+                                                <div class="project-task-modal__content">
+                                                    <!-- Modal box content goes here -->
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">To Do</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-progress">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">In Progress</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Add For Checking</span>
+                                                    </div>
+                                                    <div class="project-task-modal__item-wrapper"
+                                                        id="task-modal-completed">
+                                                        <div class="project-task-modal__box"></div>
+                                                        <span class="project-task-modal__text">Completed</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="project__tasks-name">
+                                            <a href="project.html" class="project__tasks-name-link">
+                                                UI Design with Figma
+                                            </a>
+                                        </div>
+                                        <div class="project__tasks-assignee">
+                                            <div class="project__tasks-asignee-container">
+                                                <img src="/images/avatar-3.png" alt="user profile picture"
+                                                    class="project__tasks-asignee-container-img">
+                                            </div>
+                                        </div>
+                                        <div class="project__tasks-priority">
+                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-deadline">
+                                            <p class="project__tasks-deadline__text">4-17-2023</p>
+                                            <p class="project__tasks-deadline__days">14 day left</p>
+                                        </div>
+                                        <div class="project__tasks-comments">
+                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-upload">
+                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
+                                        </div>
+                                        <div class="project__tasks-settings">
+                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
+                                        </div>
+                                    </div>
+
 
 
                                 </div>
@@ -679,43 +986,46 @@
                                         </p>
                                     </div>
                                     <div class="project__reminders-reminder-settings">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="project__reminders-reminder">
                                     <div class="project__reminders-reminder_details">
-                                        <p class="project__reminders-reminder_name">Meeting with project manager at 11 am</p>
-                                        <p class="project__reminders-reminder_date">8 - 10 am, 26th Oct</p>
+                                        <p class="project__reminders-reminder_name">Meeting with project manager</p>
+                                        <p class="project__reminders-reminder_date">8:00, 4-18-2023</p>
                                     </div>
                                     <div class="project__reminders-reminder_priority">
                                         <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                     </div>
                                     <div class="project__reminders-reminder-settings">
-                                        <i class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
+                                        <i
+                                            class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
                                     </div>
                                 </div>
                                 <div class="project__reminders-reminder">
                                     <div class="project__reminders-reminder_details">
-                                        <p class="project__reminders-reminder_name">Meeting with project manager at 11 am</p>
-                                        <p class="project__reminders-reminder_date">8 - 10 am, 26th Oct</p>
+                                        <p class="project__reminders-reminder_name">Meeting with project manager</p>
+                                        <p class="project__reminders-reminder_date">8:00, 4-18-2023</p>
                                     </div>
                                     <div class="project__reminders-reminder_priority">
                                         <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                     </div>
                                     <div class="project__reminders-reminder-settings">
-                                        <i class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
+                                        <i
+                                            class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
                                     </div>
                                 </div>
                                 <div class="project__reminders-reminder">
                                     <div class="project__reminders-reminder_details">
-                                        <p class="project__reminders-reminder_name">Meeting with project manager at 11 am</p>
-                                        <p class="project__reminders-reminder_date">8 - 10 am, 26th Oct</p>
+                                        <p class="project__reminders-reminder_name">Meeting with project manager</p>
+                                        <p class="project__reminders-reminder_date">8:00, 4-18-2023</p>dff
                                     </div>
                                     <div class="project__reminders-reminder_priority">
                                         <i class='bx bxs-flag project__tasks-priority-icon'></i>
                                     </div>
                                     <div class="project__reminders-reminder-settings">
-                                        <i class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
+                                        <i
+                                            class='bx bx-dots-horizontal-rounded project__reminders-reminder-settings_icon'></i>
                                     </div>
                                 </div>
                             </div>
@@ -723,15 +1033,7 @@
                     </div>
 
                 </div>
-
-                <!-- <div class="side-container">
-                    
-                </div> -->
-
-                <div class="project__create-fixed-btn">
-                    <i class="bx bx-plus project__create-fixed-btn_icon"></i>
-                    Event
-                </div>
+                
             </main>
         </div>
     </div>
