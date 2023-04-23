@@ -6,8 +6,7 @@ let to_do_data = [{
 {
     title: " UI Design with Figma",
     id: 2
-}
-]
+}]
 
 let in_progress_data = [{
     title: " UI Design with Figma",
@@ -16,8 +15,8 @@ let in_progress_data = [{
 {
     title: " UI Design with Figma",
     id: 4
-}
-]
+}]
+
 
 let completed_data = [{
     title: " UI Design with Figma",
@@ -26,8 +25,7 @@ let completed_data = [{
 {
     title: " UI Design with Figma",
     id: 6
-}
-]
+}]
 
 console.log(in_progress_data)
 
