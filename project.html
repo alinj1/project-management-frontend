@@ -482,7 +482,7 @@
                                             class='bx bx-chevron-down project__tasks-statuses-link_icon'
                                             id="project__tasks-statuses_icon-todo"></i>To Do</a>
                                 </div>
-                                <div class="project__tasks-table">
+                                <div class="project__tasks-table" id="to_do_content">
                                     <div class="project__tasks-row_headings">
                                         <div class="project__tasks-status">
                                             <div class="project__tasks-heading__box">
@@ -509,16 +509,19 @@
                                         <div class="project__tasks-settings">
                                         </div>
                                     </div>
-                                    <div class="project__tasks-row">
+
+
+
+                                    <!-- <div class="project__tasks-row">
                                         <div class="project__tasks-status">
                                             <div class="project__tasks-status_box-outer">
                                                 <div class="project__tasks-status_box-inner">
                                                 </div>
                                             </div>
-                                            <!-- modal box -->
+                                          
                                             <div class="project-task-modal">
                                                 <div class="project-task-modal__content">
-                                                    <!-- Modal box content goes here -->
+                                                  
                                                     <div class="project-task-modal__item-wrapper" id="task-modal-todo">
                                                         <div class="project-task-modal__box"></div>
                                                         <span class="project-task-modal__text">To Do</span>
@@ -568,69 +571,7 @@
                                         <div class="project__tasks-settings">
                                             <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
                                         </div>
-                                    </div>
-
-
-                                    <div class="project__tasks-row">
-                                        <div class="project__tasks-status">
-                                            <div class="project__tasks-status_box-outer">
-                                                <div class="project__tasks-status_box-inner">
-                                                </div>
-                                            </div>
-                                            <!-- modal box -->
-                                            <div class="project-task-modal">
-                                                <div class="project-task-modal__content">
-                                                    <!-- Modal box content goes here -->
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">To Do</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-progress">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">In Progress</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Add For Checking</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-completed">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Completed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="project__tasks-name">
-                                            <a href="project.html" class="project__tasks-name-link">
-                                                UI Design with Figma
-                                            </a>
-                                        </div>
-                                        <div class="project__tasks-assignee">
-                                            <div class="project__tasks-asignee-container">
-                                                <img src="/images/avatar-3.png" alt="user profile picture"
-                                                    class="project__tasks-asignee-container-img">
-                                            </div>
-                                        </div>
-                                        <div class="project__tasks-priority">
-                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">4-17-2023</p>
-                                            <p class="project__tasks-deadline__days">14 day left</p>
-                                        </div>
-                                        <div class="project__tasks-comments">
-                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-upload">
-                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-settings">
-                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
-                                        </div>
-                                    </div>
+                                    </div> -->
 
 
 
@@ -640,7 +581,7 @@
 
 
 
-                            <div class="project__tasks-tables">
+                            <div class="project__tasks-tables" id="in_progress">
                                 <div class="project__tasks-statuses" id="project__tasks-statuses-inprogress">
                                     <a href="#" class="project__tasks-statuses-link"
                                         id="project__tasks-statuses-link-inprogress">
@@ -676,127 +617,7 @@
                                         <div class="project__tasks-settings">
                                         </div>
                                     </div>
-                                    <div class="project__tasks-row">
-                                        <div class="project__tasks-status">
-                                            <div class="project__tasks-status_box-outer">
-                                                <div class="project__tasks-status_box-inner">
-                                                </div>
-                                            </div>
-                                            <!-- modal box -->
-                                            <div class="project-task-modal">
-                                                <div class="project-task-modal__content">
-                                                    <!-- Modal box content goes here -->
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">To Do</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-progress">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">In Progress</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Add For Checking</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-completed">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Completed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
 
-                                        </div>
-                                        <div class="project__tasks-name">
-                                            <a href="project.html" class="project__tasks-name-link">
-                                                UI Design with Figma
-                                            </a>
-                                        </div>
-                                        <div class="project__tasks-assignee">
-                                            <div class="project__tasks-asignee-container">
-                                                <img src="/images/avatar-3.png" alt="user profile picture"
-                                                    class="project__tasks-asignee-container-img">
-                                            </div>
-                                        </div>
-                                        <div class="project__tasks-priority">
-                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">4-17-2023</p>
-                                            <p class="project__tasks-deadline__days">14 day left</p>
-                                        </div>
-                                        <div class="project__tasks-comments">
-                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-upload">
-                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-settings">
-                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="project__tasks-row">
-                                        <div class="project__tasks-status">
-                                            <div class="project__tasks-status_box-outer">
-                                                <div class="project__tasks-status_box-inner">
-                                                </div>
-                                            </div>
-                                            <!-- modal box -->
-                                            <div class="project-task-modal">
-                                                <div class="project-task-modal__content">
-                                                    <!-- Modal box content goes here -->
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">To Do</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-progress">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">In Progress</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Add For Checking</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-completed">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Completed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="project__tasks-name">
-                                            <a href="project.html" class="project__tasks-name-link">
-                                                UI Design with Figma
-                                            </a>
-                                        </div>
-                                        <div class="project__tasks-assignee">
-                                            <div class="project__tasks-asignee-container">
-                                                <img src="/images/avatar-3.png" alt="user profile picture"
-                                                    class="project__tasks-asignee-container-img">
-                                            </div>
-                                        </div>
-                                        <div class="project__tasks-priority">
-                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">4-17-2023</p>
-                                            <p class="project__tasks-deadline__days">14 day left</p>
-                                        </div>
-                                        <div class="project__tasks-comments">
-                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-upload">
-                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-settings">
-                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
-                                        </div>
-                                    </div>
 
 
 
@@ -807,7 +628,7 @@
 
 
 
-                            <div class="project__tasks-tables">
+                            <div class="project__tasks-tables" id="completed">
                                 <div class="project__tasks-statuses" id="project__tasks-statuses-completed">
                                     <a href="#" class="project__tasks-statuses-link"
                                         id="project__tasks-statuses-link-completed"><i
@@ -841,129 +662,6 @@
                                         <div class="project__tasks-settings">
                                         </div>
                                     </div>
-                                    <div class="project__tasks-row">
-                                        <div class="project__tasks-status">
-                                            <div class="project__tasks-status_box-outer">
-                                                <div class="project__tasks-status_box-inner">
-                                                </div>
-                                            </div>
-                                            <!-- modal box -->
-                                            <div class="project-task-modal">
-                                                <div class="project-task-modal__content">
-                                                    <!-- Modal box content goes here -->
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">To Do</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-progress">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">In Progress</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Add For Checking</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-completed">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Completed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="project__tasks-name">
-                                            <a href="project.html" class="project__tasks-name-link">
-                                                UI Design with Figma
-                                            </a>
-                                        </div>
-                                        <div class="project__tasks-assignee">
-                                            <div class="project__tasks-asignee-container">
-                                                <img src="/images/avatar-3.png" alt="user profile picture"
-                                                    class="project__tasks-asignee-container-img">
-                                            </div>
-                                        </div>
-                                        <div class="project__tasks-priority">
-                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">4-17-2023</p>
-                                            <p class="project__tasks-deadline__days">14 day left</p>
-                                        </div>
-                                        <div class="project__tasks-comments">
-                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-upload">
-                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-settings">
-                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
-                                        </div>
-                                    </div>
-
-                                    <div class="project__tasks-row">
-                                        <div class="project__tasks-status">
-                                            <div class="project__tasks-status_box-outer">
-                                                <div class="project__tasks-status_box-inner">
-                                                </div>
-                                            </div>
-                                            <!-- modal box -->
-                                            <div class="project-task-modal">
-                                                <div class="project-task-modal__content">
-                                                    <!-- Modal box content goes here -->
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-todo">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">To Do</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-progress">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">In Progress</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper" id="task-modal-check">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Add For Checking</span>
-                                                    </div>
-                                                    <div class="project-task-modal__item-wrapper"
-                                                        id="task-modal-completed">
-                                                        <div class="project-task-modal__box"></div>
-                                                        <span class="project-task-modal__text">Completed</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="project__tasks-name">
-                                            <a href="project.html" class="project__tasks-name-link">
-                                                UI Design with Figma
-                                            </a>
-                                        </div>
-                                        <div class="project__tasks-assignee">
-                                            <div class="project__tasks-asignee-container">
-                                                <img src="/images/avatar-3.png" alt="user profile picture"
-                                                    class="project__tasks-asignee-container-img">
-                                            </div>
-                                        </div>
-                                        <div class="project__tasks-priority">
-                                            <i class='bx bxs-flag project__tasks-priority-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-deadline">
-                                            <p class="project__tasks-deadline__text">4-17-2023</p>
-                                            <p class="project__tasks-deadline__days">14 day left</p>
-                                        </div>
-                                        <div class="project__tasks-comments">
-                                            <i class='bx bx-message-rounded-dots project__tasks-comments-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-upload">
-                                            <i class='bx bx-upload project__tasks-upload-icon'></i>
-                                        </div>
-                                        <div class="project__tasks-settings">
-                                            <i class='bx bx-dots-horizontal-rounded project__tasks-settings-icon'></i>
-                                        </div>
-                                    </div>
-
-
 
                                 </div>
                             </div>
@@ -1033,12 +731,13 @@
                     </div>
 
                 </div>
-                
+
             </main>
         </div>
     </div>
 
     <script src="/js/project.js"></script>
+    <script src="/js/new_project.js"></script>
     <script src="/js/app.js"></script>
 </body>
 

@@ -18,35 +18,30 @@ const memberModalCloseIcon = document.querySelector('.project__member-modal-clos
 
 // expand/collapse tasks lists
 projectToggles.forEach((toggles, index) => {
-    toggles.addEventListener('click', (e) => {
-        e.preventDefault()
-        projectTable[index].classList.toggle('project__tasks-list-toggle');
-    })
+  toggles.addEventListener('click', (e) => {
+    e.preventDefault()
+    projectTable[index].classList.toggle('project__tasks-list-toggle');
+  })
 })
 
 // show project setting modal box
 createProjectButton.addEventListener('click', () => {
-    projectModal.style.display = 'block'
+  projectModal.style.display = 'block'
 })
 
 
 // close modal box with icon
 modalCloseIcon.addEventListener('click', () => {
-    projectModal.style.display = 'none'
+  projectModal.style.display = 'none'
 })
 // close modal box with cancel link
 modalCloseLink.addEventListener('click', () => {
-    projectModal.style.display = 'none'
+  projectModal.style.display = 'none'
 })
 
 
 
 // BUG
-$(document).ready(function(){
-  $(".project__tasks-status_box-inner").click(function(){
-    $(".project-task-modal").slideToggle();
-  });
-})
 
 
 
